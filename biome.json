@@ -26,6 +26,23 @@
       "!*.gen.*"
     ]
   },
+  "overrides": [
+    {
+      "includes": ["apps/api/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useImportType": "off"
+          }
+        }
+      },
+      "javascript": {
+        "parser": {
+          "unsafeParameterDecoratorsEnabled": true
+        }
+      }
+    }
+  ],
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -67,23 +84,5 @@
         "organizeImports": "on"
       }
     }
-  },
-
-  "overrides": [
-    {
-      "includes": ["apps/backend/**"],
-      "linter": {
-        "rules": {
-          "style": {
-            "useImportType": "off"
-          }
-        }
-      },
-      "javascript": {
-        "parser": {
-          "unsafeParameterDecoratorsEnabled": true
-        }
-      }
-    }
-  ]
+  }
 }
